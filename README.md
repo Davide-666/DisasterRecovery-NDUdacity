@@ -47,4 +47,4 @@ If you run the proper command from app directory you will start the web app wher
 
 ## Credits and Acknowledgements
 
-Thanks to Udacity for giving me the chanche to develope this project
+Thanks to Udacity for giving me the chance to develope this project!!!
