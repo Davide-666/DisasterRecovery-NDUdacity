@@ -13147,7 +13147,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import libraries</span>
@@ -13194,9 +13194,9 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[nltk_data] Downloading package punkt to /root/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
+[nltk_data]   Unzipping tokenizers/punkt.zip.
 [nltk_data] Downloading package stopwords to /root/nltk_data...
-[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data]   Unzipping corpora/stopwords.zip.
 </pre>
 </div>
 </div>
@@ -13207,7 +13207,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load data from database</span>
@@ -13231,7 +13231,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
@@ -13261,7 +13261,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
@@ -13289,7 +13289,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
@@ -13307,7 +13307,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13339,7 +13339,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_eval_metrics</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">col_names</span><span class="p">):</span>
@@ -13362,7 +13362,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_train_pred</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
@@ -13375,7 +13375,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">col_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Y</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
@@ -13388,7 +13388,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">get_eval_metrics</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Y_train</span><span class="p">),</span> <span class="n">Y_train_pred</span><span class="p">,</span> <span class="n">col_names</span><span class="p">))</span>
@@ -13455,7 +13455,7 @@ direct_report           0.981691   0.981691  0.981691  0.981691
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_test_pred</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -13524,7 +13524,7 @@ direct_report           0.839182   0.839182  0.839182  0.839182
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># %1&#39;s in each column</span>
@@ -13541,7 +13541,7 @@ direct_report           0.839182   0.839182  0.839182  0.839182
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -13602,7 +13602,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">performance_metric</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
@@ -13623,7 +13623,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;vect__min_df&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> 
@@ -13649,18 +13649,279 @@ dtype: float64</pre>
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-12-6b3d60b1d90b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span>               &#39;clf__estimator__min_samples_split&#39;:[10,20]} 
-<span class="ansi-green-intense-fg ansi-bold">      5</span> 
-<span class="ansi-green-fg">----&gt; 6</span><span class="ansi-red-fg"> </span>cv <span class="ansi-blue-fg">=</span> GridSearchCV<span class="ansi-blue-fg">(</span>pipeline<span class="ansi-blue-fg">,</span> param_grid <span class="ansi-blue-fg">=</span> parameters<span class="ansi-blue-fg">,</span> scoring <span class="ansi-blue-fg">=</span> scorer<span class="ansi-blue-fg">,</span> verbose <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> np<span class="ansi-blue-fg">.</span>random<span class="ansi-blue-fg">.</span>seed<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">81</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span> tuned_model <span class="ansi-blue-fg">=</span> cv<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>X_train<span class="ansi-blue-fg">,</span> Y_train<span class="ansi-blue-fg">)</span>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Fitting 3 folds for each of 16 candidates, totalling 48 fits
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1, score=0.9572779981690571, total=  46.4s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1 
+</pre>
+</div>
+</div>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pipeline&#39; is not defined</pre>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:  1.1min remaining:    0.0s
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1, score=0.9597192554165396, total=  46.7s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1 
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[Parallel(n_jobs=1)]: Done   2 out of   2 | elapsed:  2.1min remaining:    0.0s
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1, score=0.9586512053707659, total=  46.7s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5 
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:  3.2min remaining:    0.0s
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5, score=0.9610924626182484, total=  43.5s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5 
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[Parallel(n_jobs=1)]: Done   4 out of   4 | elapsed:  4.2min remaining:    0.0s
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5, score=0.9603295697284101, total=  43.1s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5 
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:  5.2min remaining:    0.0s
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5, score=0.9606347268843454, total=  43.1s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1 
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[Parallel(n_jobs=1)]: Done   6 out of   6 | elapsed:  6.2min remaining:    0.0s
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1, score=0.9584986267927983, total=  46.2s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1 
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[Parallel(n_jobs=1)]: Done   7 out of   7 | elapsed:  7.3min remaining:    0.0s
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1, score=0.9598718339945072, total=  46.2s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1 
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[Parallel(n_jobs=1)]: Done   8 out of   8 | elapsed:  8.4min remaining:    0.0s
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1, score=0.9592615196826366, total=  46.4s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5 
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>[Parallel(n_jobs=1)]: Done   9 out of   9 | elapsed:  9.4min remaining:    0.0s
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5, score=0.959948123283491, total=  42.0s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5, score=0.9598718339945072, total=  42.0s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5, score=0.9617790662191028, total=  42.3s
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1, score=0.9594140982606042, total= 1.4min
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1, score=0.9580408910588953, total= 1.4min
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1, score=0.9583460482148306, total= 1.4min
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5, score=0.9629234055538602, total= 1.3min
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5, score=0.9617790662191028, total= 1.3min
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5, score=0.9623130912419896, total= 1.2min
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1, score=0.9575068660360085, total= 1.4min
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1, score=0.9575068660360085, total= 1.4min
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1, score=0.9587274946597497, total= 1.4min
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5, score=0.9645254806225205, total= 1.2min
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5, score=0.9591852303936528, total= 1.2min
+[CV] clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=10, clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5, score=0.9620842233750382, total= 1.2min
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1, score=0.9591852303936528, total=  44.4s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1, score=0.9588037839487336, total=  44.6s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=1, score=0.9583460482148306, total=  44.6s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5, score=0.9612450411962161, total=  41.8s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5, score=0.9611687519072323, total=  41.7s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=True, vect__min_df=5, score=0.9617790662191028, total=  42.0s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1, score=0.9575068660360085, total=  43.7s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1, score=0.9573542874580409, total=  43.9s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=1, score=0.9584986267927983, total=  43.8s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5, score=0.9598718339945072, total=  40.7s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5, score=0.9585749160817821, total=  40.8s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=10, tfidf__use_idf=False, vect__min_df=5, score=0.9586512053707659, total=  40.9s
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1, score=0.9590326518156851, total= 1.3min
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1, score=0.958193469636863, total= 1.3min
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1, score=0.9597192554165395, total= 1.3min
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5 
+[CV]  clf__estimator__min_samples_split=20, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5, score=0.959948123283491, total= 1.2min
+[CV] clf__estimator__min_samples_split=20, clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5 
+</pre>
 </div>
 </div>
 
@@ -13670,7 +13931,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tuned_model</span><span class="o">.</span><span class="n">cv_results_</span>
@@ -13680,169 +13941,10 @@ dtype: float64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;mean_fit_time&#39;: array([ 37.3753039 ,  34.58815694,  37.32041327,  33.66715272,
-         72.82028492,  65.02172685,  72.04302669,  62.68764846,
-         36.48023764,  33.88950507,  35.60029848,  32.84022339,
-         68.56761376,  63.49824731,  67.46273367,  61.41512497]),
- &#39;std_fit_time&#39;: array([ 0.16707716,  0.16489699,  0.27125572,  0.20214883,  0.27570641,
-         0.17331402,  0.68161066,  0.29179849,  0.23396623,  0.15990021,
-         0.04496809,  0.07499492,  0.33870889,  0.72820438,  0.55597182,
-         0.15731691]),
- &#39;mean_score_time&#39;: array([  8.84955359,   8.40192906,   8.76351364,   8.43198299,
-         11.29578829,  10.34454306,  11.20223912,  10.29190532,
-          8.8692565 ,   8.50241176,   8.84628558,   8.52206469,
-         11.30008451,  10.53220487,  11.36445212,  10.7234683 ]),
- &#39;std_score_time&#39;: array([ 0.04700629,  0.06656125,  0.10069829,  0.06277523,  0.01165141,
-         0.08231738,  0.09473219,  0.07151965,  0.05721611,  0.05625158,
-         0.02738387,  0.1423813 ,  0.06597114,  0.26252818,  0.16446867,
-         0.07459147]),
- &#39;param_clf__estimator__min_samples_split&#39;: masked_array(data = [10 10 10 10 10 10 10 10 20 20 20 20 20 20 20 20],
-              mask = [False False False False False False False False False False False False
-  False False False False],
-        fill_value = ?),
- &#39;param_clf__estimator__n_estimators&#39;: masked_array(data = [10 10 10 10 25 25 25 25 10 10 10 10 25 25 25 25],
-              mask = [False False False False False False False False False False False False
-  False False False False],
-        fill_value = ?),
- &#39;param_tfidf__use_idf&#39;: masked_array(data = [True True False False True True False False True True False False True
-  True False False],
-              mask = [False False False False False False False False False False False False
-  False False False False],
-        fill_value = ?),
- &#39;param_vect__min_df&#39;: masked_array(data = [1 5 1 5 1 5 1 5 1 5 1 5 1 5 1 5],
-              mask = [False False False False False False False False False False False False
-  False False False False],
-        fill_value = ?),
- &#39;params&#39;: [{&#39;clf__estimator__min_samples_split&#39;: 10,
-   &#39;clf__estimator__n_estimators&#39;: 10,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__min_samples_split&#39;: 10,
-   &#39;clf__estimator__n_estimators&#39;: 10,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 5},
-  {&#39;clf__estimator__min_samples_split&#39;: 10,
-   &#39;clf__estimator__n_estimators&#39;: 10,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__min_samples_split&#39;: 10,
-   &#39;clf__estimator__n_estimators&#39;: 10,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 5},
-  {&#39;clf__estimator__min_samples_split&#39;: 10,
-   &#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__min_samples_split&#39;: 10,
-   &#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 5},
-  {&#39;clf__estimator__min_samples_split&#39;: 10,
-   &#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__min_samples_split&#39;: 10,
-   &#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 5},
-  {&#39;clf__estimator__min_samples_split&#39;: 20,
-   &#39;clf__estimator__n_estimators&#39;: 10,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__min_samples_split&#39;: 20,
-   &#39;clf__estimator__n_estimators&#39;: 10,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 5},
-  {&#39;clf__estimator__min_samples_split&#39;: 20,
-   &#39;clf__estimator__n_estimators&#39;: 10,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__min_samples_split&#39;: 20,
-   &#39;clf__estimator__n_estimators&#39;: 10,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 5},
-  {&#39;clf__estimator__min_samples_split&#39;: 20,
-   &#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__min_samples_split&#39;: 20,
-   &#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 5},
-  {&#39;clf__estimator__min_samples_split&#39;: 20,
-   &#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__min_samples_split&#39;: 20,
-   &#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 5}],
- &#39;split0_test_score&#39;: array([ 0.957278  ,  0.96109246,  0.95849863,  0.95994812,  0.9594141 ,
-         0.96292341,  0.95750687,  0.96452548,  0.95918523,  0.96124504,
-         0.95750687,  0.95987183,  0.95903265,  0.95994812,  0.95590479,
-         0.96170278]),
- &#39;split1_test_score&#39;: array([ 0.95971926,  0.96032957,  0.95987183,  0.95987183,  0.95804089,
-         0.96177907,  0.95750687,  0.95918523,  0.95880378,  0.96116875,
-         0.95735429,  0.95857492,  0.95819347,  0.96017699,  0.95834605,
-         0.95872749]),
- &#39;split2_test_score&#39;: array([ 0.95865121,  0.96063473,  0.95926152,  0.96177907,  0.95834605,
-         0.96231309,  0.95872749,  0.96208422,  0.95834605,  0.96177907,
-         0.95849863,  0.95865121,  0.95971926,  0.96109246,  0.95819347,
-         0.96177907]),
- &#39;mean_test_score&#39;: array([ 0.95854949,  0.96068559,  0.95921066,  0.96053301,  0.95860035,
-         0.96233852,  0.95791374,  0.96193164,  0.95877835,  0.96139762,
-         0.95778659,  0.95903265,  0.95898179,  0.96040586,  0.95748144,
-         0.96073645]),
- &#39;std_test_score&#39;: array([ 0.00099923,  0.00031352,  0.00056176,  0.00088165,  0.00058874,
-         0.00046752,  0.00057541,  0.00218282,  0.00034307,  0.00027152,
-         0.00050732,  0.00059421,  0.00062394,  0.00049441,  0.0011166 ,
-         0.00142088]),
- &#39;rank_test_score&#39;: array([13,  5,  8,  6, 12,  1, 14,  2, 11,  3, 15,  9, 10,  7, 16,  4], dtype=int32),
- &#39;split0_train_score&#39;: array([ 0.98855661,  0.98634422,  0.98809887,  0.98657309,  0.98981538,
-         0.98886176,  0.99027312,  0.98779371,  0.98447513,  0.98382667,
-         0.98455142,  0.98317821,  0.98668752,  0.98481843,  0.98581019,
-         0.98432255]),
- &#39;split1_train_score&#39;: array([ 0.98851846,  0.98680195,  0.98745041,  0.98523802,  0.98981538,
-         0.98798444,  0.98954837,  0.98756485,  0.98485658,  0.98382667,
-         0.98478029,  0.98329265,  0.98661123,  0.98439884,  0.98584834,
-         0.98378853]),
- &#39;split2_train_score&#39;: array([ 0.98764114,  0.98771742,  0.98798444,  0.98699268,  0.99019683,
-         0.98882362,  0.98947208,  0.98840403,  0.98535246,  0.98371224,
-         0.98428441,  0.98314007,  0.98691639,  0.98561947,  0.98626793,
-         0.98401739]),
- &#39;mean_train_score&#39;: array([ 0.98823873,  0.98695453,  0.98784457,  0.98626793,  0.98994253,
-         0.98855661,  0.98976452,  0.98792086,  0.98489472,  0.98378853,
-         0.9845387 ,  0.98320364,  0.98673838,  0.98494558,  0.98597549,
-         0.98404282]),
- &#39;std_train_score&#39;: array([  4.22853452e-04,   5.70896763e-04,   2.82602365e-04,
-          7.48127896e-04,   1.79815579e-04,   4.04884634e-04,
-          3.60977255e-04,   3.54195613e-04,   3.59181337e-04,
-          5.39446736e-05,   2.02641866e-04,   6.48334289e-05,
-          1.29666858e-04,   5.06365267e-04,   2.07373442e-04,
-          2.18755093e-04])}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">tuned_model</span><span class="o">.</span><span class="n">cv_results_</span><span class="p">[</span><span class="s1">&#39;mean_test_score&#39;</span><span class="p">])</span>
@@ -13852,59 +13954,16 @@ dtype: float64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[20]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0.96233852100498418</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tuned_model</span><span class="o">.</span><span class="n">best_params_</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;clf__estimator__min_samples_split&#39;: 10,
- &#39;clf__estimator__n_estimators&#39;: 25,
- &#39;tfidf__use_idf&#39;: True,
- &#39;vect__min_df&#39;: 5}</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13920,7 +13979,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tuned_pred_test</span> <span class="o">=</span> <span class="n">tuned_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -13932,64 +13991,10 @@ dtype: float64</pre>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>                        Accuracy  Precision    Recall        F1
-related                 0.821483   0.821483  0.821483  0.821483
-request                 0.893042   0.893042  0.893042  0.893042
-offer                   0.996033   0.996033  0.996033  0.996033
-aid_related             0.774794   0.774794  0.774794  0.774794
-medical_help            0.919133   0.919133  0.919133  0.919133
-medical_products        0.951480   0.951480  0.951480  0.951480
-search_and_rescue       0.975130   0.975130  0.975130  0.975130
-security                0.982759   0.982759  0.982759  0.982759
-military                0.971773   0.971773  0.971773  0.971773
-child_alone             1.000000   1.000000  1.000000  1.000000
-water                   0.962161   0.962161  0.962161  0.962161
-food                    0.946292   0.946292  0.946292  0.946292
-shelter                 0.941715   0.941715  0.941715  0.941715
-clothing                0.988251   0.988251  0.988251  0.988251
-money                   0.978944   0.978944  0.978944  0.978944
-missing_people          0.987946   0.987946  0.987946  0.987946
-refugees                0.966433   0.966433  0.966433  0.966433
-death                   0.963076   0.963076  0.963076  0.963076
-other_aid               0.862984   0.862984  0.862984  0.862984
-infrastructure_related  0.935002   0.935002  0.935002  0.935002
-transport               0.953769   0.953769  0.953769  0.953769
-buildings               0.952701   0.952701  0.952701  0.952701
-electricity             0.979860   0.979860  0.979860  0.979860
-tools                   0.994202   0.994202  0.994202  0.994202
-hospitals               0.989930   0.989930  0.989930  0.989930
-shops                   0.995728   0.995728  0.995728  0.995728
-aid_centers             0.989167   0.989167  0.989167  0.989167
-other_infrastructure    0.954989   0.954989  0.954989  0.954989
-weather_related         0.888770   0.888770  0.888770  0.888770
-floods                  0.954074   0.954074  0.954074  0.954074
-storm                   0.945835   0.945835  0.945835  0.945835
-fire                    0.988404   0.988404  0.988404  0.988404
-earthquake              0.972688   0.972688  0.972688  0.972688
-cold                    0.984132   0.984132  0.984132  0.984132
-other_weather           0.950412   0.950412  0.950412  0.950412
-direct_report           0.848642   0.848642  0.848642  0.848642
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eval_metrics0</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -13999,220 +14004,16 @@ direct_report           0.848642   0.848642  0.848642  0.848642
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[23]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Accuracy</th>
-      <th>Precision</th>
-      <th>Recall</th>
-      <th>F1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>36.000000</td>
-      <td>36.000000</td>
-      <td>36.000000</td>
-      <td>36.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>0.944572</td>
-      <td>0.944572</td>
-      <td>0.944572</td>
-      <td>0.944572</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>0.058509</td>
-      <td>0.058509</td>
-      <td>0.058509</td>
-      <td>0.058509</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>0.740769</td>
-      <td>0.740769</td>
-      <td>0.740769</td>
-      <td>0.740769</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>0.935307</td>
-      <td>0.935307</td>
-      <td>0.935307</td>
-      <td>0.935307</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>0.957736</td>
-      <td>0.957736</td>
-      <td>0.957736</td>
-      <td>0.957736</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>0.984551</td>
-      <td>0.984551</td>
-      <td>0.984551</td>
-      <td>0.984551</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eval_metrics1</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[24]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Accuracy</th>
-      <th>Precision</th>
-      <th>Recall</th>
-      <th>F1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>36.000000</td>
-      <td>36.000000</td>
-      <td>36.000000</td>
-      <td>36.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>0.948937</td>
-      <td>0.948937</td>
-      <td>0.948937</td>
-      <td>0.948937</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>0.052291</td>
-      <td>0.052291</td>
-      <td>0.052291</td>
-      <td>0.052291</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>0.774794</td>
-      <td>0.774794</td>
-      <td>0.774794</td>
-      <td>0.774794</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>0.944805</td>
-      <td>0.944805</td>
-      <td>0.944805</td>
-      <td>0.944805</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>0.962618</td>
-      <td>0.962618</td>
-      <td>0.962618</td>
-      <td>0.962618</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>0.985085</td>
-      <td>0.985085</td>
-      <td>0.985085</td>
-      <td>0.985085</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14230,7 +14031,7 @@ direct_report           0.848642   0.848642  0.848642  0.848642
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">AdaBoostClassifier</span>
@@ -14254,7 +14055,7 @@ direct_report           0.848642   0.848642  0.848642  0.848642
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv2</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipeline2</span><span class="p">,</span> <span class="n">param_grid</span> <span class="o">=</span> <span class="n">parameters2</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">scorer</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
@@ -14266,276 +14067,10 @@ direct_report           0.848642   0.848642  0.848642  0.848642
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Fitting 3 folds for each of 8 candidates, totalling 24 fits
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=1 
-[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=1, score=0.9652883735123589, total=  42.2s
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=1 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:   58.2s remaining:    0.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=1, score=0.9651357949343912, total=  41.9s
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=1 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   2 out of   2 | elapsed:  1.9min remaining:    0.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=1, score=0.9645254806225205, total=  42.1s
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=5 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:  2.9min remaining:    0.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=5, score=0.9652120842233751, total=  39.4s
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=5 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   4 out of   4 | elapsed:  3.8min remaining:    0.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=5, score=0.9644491913335367, total=  39.0s
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=5 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:  4.7min remaining:    0.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=True, vect__min_df=5, score=0.9644491913335367, total=  39.3s
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=1 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   6 out of   6 | elapsed:  5.7min remaining:    0.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=1, score=0.9655172413793103, total=  39.8s
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=1 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   7 out of   7 | elapsed:  6.6min remaining:    0.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=1, score=0.9647543484894721, total=  39.5s
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=1 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   8 out of   8 | elapsed:  7.5min remaining:    0.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=1, score=0.9636100091547146, total=  39.9s
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=5 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   9 out of   9 | elapsed:  8.5min remaining:    0.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=5, score=0.9653646628013427, total=  36.5s
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=5 
-[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=5, score=0.9646780592004882, total=  37.5s
-[CV] clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=5 
-[CV]  clf__estimator__n_estimators=15, tfidf__use_idf=False, vect__min_df=5, score=0.9635337198657309, total=  37.4s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1, score=0.965669819957278, total=  55.1s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1, score=0.9646780592004882, total=  54.7s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=1, score=0.9646017699115044, total=  54.9s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5, score=0.9647543484894721, total=  50.9s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5, score=0.9651357949343912, total=  50.5s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=True, vect__min_df=5, score=0.9650595056454074, total=  50.2s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1, score=0.9660512664021972, total=  53.1s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1, score=0.9653646628013427, total=  52.2s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1, score=0.9644491913335368, total=  52.4s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5, score=0.9641440341776015, total=  46.9s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5, score=0.9650595056454074, total=  46.3s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=5, score=0.9641440341776015, total=  47.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done  24 out of  24 | elapsed: 24.8min finished
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tuned_model2</span><span class="o">.</span><span class="n">cv_results_</span>
@@ -14545,92 +14080,10 @@ direct_report           0.848642   0.848642  0.848642  0.848642
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[41]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;mean_fit_time&#39;: array([ 34.02467553,  31.1124231 ,  31.77975456,  29.04429046,
-         46.45106196,  42.02028354,  44.08502348,  38.26673381]),
- &#39;std_fit_time&#39;: array([ 0.15370576,  0.21309055,  0.15339845,  0.3337721 ,  0.15575342,
-         0.24774566,  0.40730021,  0.34484118]),
- &#39;mean_score_time&#39;: array([ 8.04602393,  8.09538921,  7.9764719 ,  8.10007334,  8.45302693,
-         8.50608548,  8.44568324,  8.43513385]),
- &#39;std_score_time&#39;: array([ 0.02138721,  0.04498584,  0.04315084,  0.25931495,  0.04831943,
-         0.04779611,  0.04742097,  0.07025544]),
- &#39;param_clf__estimator__n_estimators&#39;: masked_array(data = [15 15 15 15 25 25 25 25],
-              mask = [False False False False False False False False],
-        fill_value = ?),
- &#39;param_tfidf__use_idf&#39;: masked_array(data = [True True False False True True False False],
-              mask = [False False False False False False False False],
-        fill_value = ?),
- &#39;param_vect__min_df&#39;: masked_array(data = [1 5 1 5 1 5 1 5],
-              mask = [False False False False False False False False],
-        fill_value = ?),
- &#39;params&#39;: [{&#39;clf__estimator__n_estimators&#39;: 15,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__n_estimators&#39;: 15,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 5},
-  {&#39;clf__estimator__n_estimators&#39;: 15,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__n_estimators&#39;: 15,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 5},
-  {&#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: True,
-   &#39;vect__min_df&#39;: 5},
-  {&#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 1},
-  {&#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 5}],
- &#39;split0_test_score&#39;: array([ 0.96528837,  0.96521208,  0.96551724,  0.96536466,  0.96566982,
-         0.96475435,  0.96605127,  0.96414403]),
- &#39;split1_test_score&#39;: array([ 0.96513579,  0.96444919,  0.96475435,  0.96467806,  0.96467806,
-         0.96513579,  0.96536466,  0.96505951]),
- &#39;split2_test_score&#39;: array([ 0.96452548,  0.96444919,  0.96361001,  0.96353372,  0.96460177,
-         0.96505951,  0.96444919,  0.96414403]),
- &#39;mean_test_score&#39;: array([ 0.96498322,  0.96470349,  0.9646272 ,  0.96452548,  0.96498322,
-         0.96498322,  0.96528837,  0.96444919]),
- &#39;std_test_score&#39;: array([ 0.00032961,  0.00035963,  0.0007838 ,  0.00075523,  0.0004865 ,
-         0.0001648 ,  0.00065627,  0.00043156]),
- &#39;rank_test_score&#39;: array([2, 5, 6, 7, 2, 2, 1, 8], dtype=int32),
- &#39;split0_train_score&#39;: array([ 0.9654791 ,  0.9654791 ,  0.96536466,  0.96570796,  0.96628013,
-         0.96563168,  0.96647086,  0.96593683]),
- &#39;split1_train_score&#39;: array([ 0.96528837,  0.96521208,  0.96483064,  0.96639457,  0.96628013,
-         0.96639457,  0.96643271,  0.96692859]),
- &#39;split2_train_score&#39;: array([ 0.96521208,  0.96647086,  0.9658224 ,  0.96601312,  0.96608941,
-         0.96753891,  0.96677601,  0.96654715]),
- &#39;mean_train_score&#39;: array([ 0.96532652,  0.96572068,  0.96533923,  0.96603855,  0.96621656,
-         0.96652172,  0.96655986,  0.96647086]),
- &#39;std_train_score&#39;: array([  1.12294793e-04,   5.41540521e-04,   4.05283731e-04,
-          2.80880913e-04,   8.99077893e-05,   7.83797935e-04,
-          1.53634498e-04,   4.08462476e-04])}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tuned_pred_test2</span> <span class="o">=</span> <span class="n">tuned_model2</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -14642,64 +14095,10 @@ direct_report           0.848642   0.848642  0.848642  0.848642
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>                        Accuracy  Precision    Recall        F1
-related                 0.754196   0.754196  0.754196  0.754196
-request                 0.877479   0.877479  0.877479  0.877479
-offer                   0.995575   0.995575  0.995575  0.995575
-aid_related             0.741379   0.741379  0.741379  0.741379
-medical_help            0.925084   0.925084  0.925084  0.925084
-medical_products        0.953616   0.953616  0.953616  0.953616
-search_and_rescue       0.975282   0.975282  0.975282  0.975282
-security                0.982148   0.982148  0.982148  0.982148
-military                0.971620   0.971620  0.971620  0.971620
-child_alone             1.000000   1.000000  1.000000  1.000000
-water                   0.960940   0.960940  0.960940  0.960940
-food                    0.942630   0.942630  0.942630  0.942630
-shelter                 0.943546   0.943546  0.943546  0.943546
-clothing                0.990845   0.990845  0.990845  0.990845
-money                   0.979249   0.979249  0.979249  0.979249
-missing_people          0.989625   0.989625  0.989625  0.989625
-refugees                0.967958   0.967958  0.967958  0.967958
-death                   0.969637   0.969637  0.969637  0.969637
-other_aid               0.864358   0.864358  0.864358  0.864358
-infrastructure_related  0.936680   0.936680  0.936680  0.936680
-transport               0.958346   0.958346  0.958346  0.958346
-buildings               0.960787   0.960787  0.960787  0.960787
-electricity             0.979554   0.979554  0.979554  0.979554
-tools                   0.993744   0.993744  0.993744  0.993744
-hospitals               0.988251   0.988251  0.988251  0.988251
-shops                   0.995575   0.995575  0.995575  0.995575
-aid_centers             0.987946   0.987946  0.987946  0.987946
-other_infrastructure    0.953769   0.953769  0.953769  0.953769
-weather_related         0.864205   0.864205  0.864205  0.864205
-floods                  0.956973   0.956973  0.956973  0.956973
-storm                   0.930424   0.930424  0.930424  0.930424
-fire                    0.989319   0.989319  0.989319  0.989319
-earthquake              0.969789   0.969789  0.969789  0.969789
-cold                    0.984590   0.984590  0.984590  0.984590
-other_weather           0.947208   0.947208  0.947208  0.947208
-direct_report           0.838267   0.838267  0.838267  0.838267
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">AdaBoostClassifier</span>
@@ -14723,7 +14122,7 @@ direct_report           0.838267   0.838267  0.838267  0.838267
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv3</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipeline3</span><span class="p">,</span> <span class="n">param_grid</span> <span class="o">=</span> <span class="n">parameters3</span><span class="p">,</span> <span class="n">scoring</span> <span class="o">=</span> <span class="n">scorer</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
@@ -14735,88 +14134,10 @@ direct_report           0.838267   0.838267  0.838267  0.838267
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Fitting 3 folds for each of 1 candidates, totalling 3 fits
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1 
-[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1, score=0.9660512664021972, total=  49.3s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:  1.1min remaining:    0.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1, score=0.9653646628013427, total=  49.3s
-[CV] clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   2 out of   2 | elapsed:  2.2min remaining:    0.0s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[CV]  clf__estimator__n_estimators=25, tfidf__use_idf=False, vect__min_df=1, score=0.9644491913335368, total=  49.1s
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:  3.3min remaining:    0.0s
-[Parallel(n_jobs=1)]: Done   3 out of   3 | elapsed:  3.3min finished
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tuned_model3</span><span class="o">.</span><span class="n">cv_results_</span>
@@ -14826,56 +14147,10 @@ direct_report           0.838267   0.838267  0.838267  0.838267
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{&#39;mean_fit_time&#39;: array([ 41.08082994]),
- &#39;std_fit_time&#39;: array([ 0.10112788]),
- &#39;mean_score_time&#39;: array([ 8.14365101]),
- &#39;std_score_time&#39;: array([ 0.0401325]),
- &#39;param_clf__estimator__n_estimators&#39;: masked_array(data = [25],
-              mask = [False],
-        fill_value = ?),
- &#39;param_tfidf__use_idf&#39;: masked_array(data = [False],
-              mask = [False],
-        fill_value = ?),
- &#39;param_vect__min_df&#39;: masked_array(data = [1],
-              mask = [False],
-        fill_value = ?),
- &#39;params&#39;: [{&#39;clf__estimator__n_estimators&#39;: 25,
-   &#39;tfidf__use_idf&#39;: False,
-   &#39;vect__min_df&#39;: 1}],
- &#39;split0_test_score&#39;: array([ 0.96605127]),
- &#39;split1_test_score&#39;: array([ 0.96536466]),
- &#39;split2_test_score&#39;: array([ 0.96444919]),
- &#39;mean_test_score&#39;: array([ 0.96528837]),
- &#39;std_test_score&#39;: array([ 0.00065627]),
- &#39;rank_test_score&#39;: array([1], dtype=int32),
- &#39;split0_train_score&#39;: array([ 0.96647086]),
- &#39;split1_train_score&#39;: array([ 0.96643271]),
- &#39;split2_train_score&#39;: array([ 0.96677601]),
- &#39;mean_train_score&#39;: array([ 0.96655986]),
- &#39;std_train_score&#39;: array([ 0.00015363])}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tuned_pred_test3</span> <span class="o">=</span> <span class="n">tuned_model3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -14884,60 +14159,6 @@ direct_report           0.838267   0.838267  0.838267  0.838267
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>                        Accuracy  Precision    Recall        F1
-related                 0.754196   0.754196  0.754196  0.754196
-request                 0.877479   0.877479  0.877479  0.877479
-offer                   0.995575   0.995575  0.995575  0.995575
-aid_related             0.741379   0.741379  0.741379  0.741379
-medical_help            0.925084   0.925084  0.925084  0.925084
-medical_products        0.953616   0.953616  0.953616  0.953616
-search_and_rescue       0.975282   0.975282  0.975282  0.975282
-security                0.982148   0.982148  0.982148  0.982148
-military                0.971620   0.971620  0.971620  0.971620
-child_alone             1.000000   1.000000  1.000000  1.000000
-water                   0.960940   0.960940  0.960940  0.960940
-food                    0.942630   0.942630  0.942630  0.942630
-shelter                 0.943546   0.943546  0.943546  0.943546
-clothing                0.990845   0.990845  0.990845  0.990845
-money                   0.979249   0.979249  0.979249  0.979249
-missing_people          0.989625   0.989625  0.989625  0.989625
-refugees                0.967958   0.967958  0.967958  0.967958
-death                   0.969637   0.969637  0.969637  0.969637
-other_aid               0.864358   0.864358  0.864358  0.864358
-infrastructure_related  0.936680   0.936680  0.936680  0.936680
-transport               0.958346   0.958346  0.958346  0.958346
-buildings               0.960787   0.960787  0.960787  0.960787
-electricity             0.979554   0.979554  0.979554  0.979554
-tools                   0.993744   0.993744  0.993744  0.993744
-hospitals               0.988251   0.988251  0.988251  0.988251
-shops                   0.995575   0.995575  0.995575  0.995575
-aid_centers             0.987946   0.987946  0.987946  0.987946
-other_infrastructure    0.953769   0.953769  0.953769  0.953769
-weather_related         0.864205   0.864205  0.864205  0.864205
-floods                  0.956973   0.956973  0.956973  0.956973
-storm                   0.930424   0.930424  0.930424  0.930424
-fire                    0.989319   0.989319  0.989319  0.989319
-earthquake              0.969789   0.969789  0.969789  0.969789
-cold                    0.984590   0.984590  0.984590  0.984590
-other_weather           0.947208   0.947208  0.947208  0.947208
-direct_report           0.838267   0.838267  0.838267  0.838267
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -14951,7 +14172,7 @@ direct_report           0.838267   0.838267  0.838267  0.838267
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tuned_model3</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;disaster_model.sav&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">))</span>
@@ -14972,7 +14193,7 @@ direct_report           0.838267   0.838267  0.838267  0.838267
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span> 
