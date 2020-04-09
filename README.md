@@ -37,7 +37,7 @@ If you run the proper command from app directory you will start the web app wher
     `python run.py`
 
 3. Open another Terminal Window and type 
-    'env|grep WORK'
+    `env|grep WORK`
 
 4. Take note of the WORKSPACEID string and in a new web browser window, type in the following:
     'https://WORKSPACEID-3001.udacity-student-workspaces.com/', changing WORKSPACEID with the proper value.
