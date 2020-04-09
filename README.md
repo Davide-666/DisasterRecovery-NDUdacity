@@ -40,7 +40,7 @@ If you run the proper command from app directory you will start the web app wher
     `env|grep WORK`
 
 4. Take note of the WORKSPACEID string and in a new web browser window, type in the following:
-    'https://WORKSPACEID-3001.udacity-student-workspaces.com/', changing WORKSPACEID with the proper value.
+    `https://WORKSPACEID-3001.udacity-student-workspaces.com/`, changing `WORKSPACEID` with the proper value.
     
     At this point you should be able to see the web app. The number 3001 represents the port where your web app will show up. 
     Make sure that the 3001 is part of the web address you type in.
