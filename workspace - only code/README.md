@@ -11,4 +11,4 @@
 2. Run the following command in the app's directory to run your web app.
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/cd app
+3. Open another Terminal Window and type `env|grep WORK`, take note of the WORKSPACEID string and in a new web browser window, type in the following: https://WORKSPACEID-3001.udacity-student-workspaces.com/, changing WORKSPACEID with the proper value.  At this point you should be able to see the web app. The number 3001 represents the port where your web app will show up. Make sure that the 3001 is part of the web address you type in.
