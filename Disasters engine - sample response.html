@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)https://view6914b2f4-3001.udacity-student-workspaces.com/go?query=Please+provide+fresh+water+and+blankets -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Disasters</title>
+
+    <link rel="stylesheet" href="./Disasters engine - sample response_files/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Disasters engine - sample response_files/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="./Disasters engine - sample response_files/jquery.min.js.download"></script>
+    <script src="./Disasters engine - sample response_files/plotly-latest.min.js.download"></script><style id="plotly.js-style-global"></style>
+<script data-avast-pam="y" type="text/javascript" name="AVAST_PAM_submitInjector">(function _submitInjector() {
+        var f = document.querySelectorAll("form")[0]; // eslint-disable-line no-undef
+        if (!f._avast_submit) {
+          f._avast_submit = f.submit;
+        }
+        try {
+          Object.defineProperty(f, "submit", {
+            get: function get() {
+              return function (prev_submit) {
+                prev_submit.call(this);
+
+                if (this._avast_inside_submit) {
+                  return;
+                }
+                this._avast_inside_submit = true;
+
+                var evt = document.createEvent("CustomEvent");
+                evt.initEvent("scriptsubmit", true, true); // bubbling & cancelable
+                this.dispatchEvent(evt);
+
+                delete this._avast_inside_submit;
+              }.bind(this, this._avast_submit);
+            },
+            set: function set(submitFunc) {
+              this._avast_submit = submitFunc;
+            }
+          });
+        } catch (ex) {
+          // ignored
+        }
+      })();</script></head><span id="warning-container"><i data-reactroot=""></i></span>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="https://view6914b2f4-3001.udacity-student-workspaces.com/">Disaster Response Project</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="https://www.udacity.com/">Made with Udacity</a></li>
+                <li><a href="https://github.com/Davide-666/DisasterRecovery-NDUdacity">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="text-center">Disaster Response Project</h1>
+        <p class="text-center">Analyzing message data for disaster response</p>
+        <hr>
+      
+        <div class="row">
+            <div class="col-lg-12 form-group-lg">
+                <form action="https://view6914b2f4-3001.udacity-student-workspaces.com/go" method="get">
+                    <input type="text" class="form-control form-control-lg" name="query" placeholder="Enter a message to classify">
+                    <div class="col-lg-offset-5">
+                        <button type="submit" class="btn btn-lg btn-success">Classify Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+    <hr>
+    <h4 class="text-center">MESSAGE</h4>
+    <p class="text-center"><i>Please provide fresh water and blankets</i></p>
+
+    </div>
+</div>
+
+<div class="container">
+    
+    <h1 class="text-center">Result</h1>
+        <ul class="list-group">
+            
+                
+                    <li class="list-group-item list-group-item-success text-center">Related</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Request</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Offer</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-success text-center">Aid Related</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Medical Help</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Medical Products</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Search And Rescue</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Security</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Military</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Child Alone</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Water</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Food</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-success text-center">Shelter</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Clothing</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Money</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Missing People</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Refugees</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Death</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Other Aid</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Infrastructure Related</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Transport</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Buildings</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Electricity</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Tools</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Hospitals</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Shops</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Aid Centers</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Other Infrastructure</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Weather Related</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Floods</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Storm</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Fire</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Earthquake</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Cold</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Other Weather</li>
+                
+            
+                
+                    <li class="list-group-item list-group-item-dark text-center">Direct Report</li>
+                
+            
+
+        </ul></div>
+    
+
+
+
+    
+
+
+<script type="text/javascript">
+    const graphs = ;
+    const ids = ;
+    for(let i in graphs) {
+        Plotly.plot(ids[i], graphs[i].data, graphs[i].layout);
+    }
+</script>
+
+
+</body></html>
